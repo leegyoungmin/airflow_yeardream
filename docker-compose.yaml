@@ -73,7 +73,7 @@ x-airflow-common:
     # If you want to use it, outcomment it and replace airflow.cfg with the name of your config file
     # AIRFLOW_CONFIG: '/opt/airflow/config/airflow.cfg'
   volumes:
-    - /home/ubuntu/airflow_yeardream/dags:/opt/airflow/dags
+    - /home/ubuntu/airflow_yeardream/airflow/dags:/opt/airflow/dags
     - /home/ubuntu/logs:/opt/airflow/logs
     - /home/ubuntu/config:/opt/airflow/config
     - /home/ubuntu/plugins:/opt/airflow/plugins
