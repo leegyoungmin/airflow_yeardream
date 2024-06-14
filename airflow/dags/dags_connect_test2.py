@@ -6,7 +6,7 @@ from airflow.operators.bash import BashOperator
 from airflow.operators.empty import EmptyOperator
 
 with DAG(
-        dag_id="dags_bash_operator",
+        dag_id="dags_connect_test2",
         schedule=None,
         start_date=pendulum.datetime(2024, 6, 14, tz="Asia/Seoul"),
         catchup=False
