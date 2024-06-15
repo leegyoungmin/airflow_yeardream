@@ -13,17 +13,20 @@ dags_bash_operator_standard = DAG(
 
 task_1 = BashOperator(
     task_id='bash_task_1',
-    bash_command='echo task_1'
+    bash_command='echo task_1',
+    dag=dags_bash_operator_standard
 )
 
 task_2 = BashOperator(
     task_id='bash_task_2',
-    bash_command='echo task_2'
+    bash_command='echo task_2',
+    dag=dags_bash_operator_standard
 )
 
 task_3 = BashOperator(
     task_id='bash_task_3',
-    bash_command='echo task_3'
+    bash_command='echo task_3',
+    dag=dags_bash_operator_standard
 )
 
 task_1 >> task_2 >> task_3
