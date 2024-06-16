@@ -28,4 +28,4 @@ def generate_bash_dag():
 
     task_1 >> task_2 >> task_3
 
-generate_bash_dag()
+dag = generate_bash_dag()
