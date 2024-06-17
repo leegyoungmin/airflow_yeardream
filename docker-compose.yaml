@@ -79,8 +79,8 @@ x-airflow-common:
     AIRFLOW__SMTP__SMTP_FROM: 'dlrudals8899@gmail.com'
   volumes:
     - /home/ubuntu/airflow_yeardream/airflow/dags:/opt/airflow/dags
-    - /home/ubuntu/airflow_yeardream/logs:/opt/airflow/logs
-    - /home/ubuntu/airflow_yeardream/config:/opt/airflow/config
+    - /home/ubuntu/logs:/opt/airflow/logs
+    - /home/ubuntu/config:/opt/airflow/config
     - /home/ubuntu/airflow_yeardream/plugins:/opt/airflow/plugins
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on:
