@@ -74,7 +74,7 @@ x-airflow-common:
     # AIRFLOW_CONFIG: '/opt/airflow/config/airflow.cfg'
     AIRFLOW__SMTP__SMTP_HOST: 'smtp.gmail.com'
     AIRFLOW__SMTP__SMTP_USER: 'dlrudals8899@gmail.com'
-    AIRFLOW__SMTP__SMTP_PASSWORD: '##SMTP_PASSWORD##'
+    AIRFLOW__SMTP__SMTP_PASSWORD: 'gsls qeiv spjh zvzs'
     AIRFLOW__SMTP__SMTP_PORT: 587
     AIRFLOW__SMTP__SMTP_FROM: 'dlrudals8899@gmail.com'
   volumes:
