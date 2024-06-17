@@ -72,11 +72,11 @@ x-airflow-common:
     # The following line can be used to set a custom config file, stored in the local config folder
     # If you want to use it, outcomment it and replace airflow.cfg with the name of your config file
     # AIRFLOW_CONFIG: '/opt/airflow/config/airflow.cfg'
-    AIRFLOW_SMTP_SMTP_HOST: 'smtp.gmail.com'
-    AIRFLOW_SMTP_SMTP_USER: 'dlrudals8899@gmail.com'
-    AIRFLOW_SMTP_SMTP_PASSWORD: '##SMTP_PASSWORD##'
-    AIRFLOW_SMTP_SMTP_PORT: 587
-    AIRFLOW_SMTP_SMTP_FROM: 'dlrudals8899@gmail.com'
+    AIRFLOW__SMTP__SMTP_HOST: 'smtp.gmail.com'
+    AIRFLOW__SMTP__SMTP_USER: 'dlrudals8899@gmail.com'
+    AIRFLOW__SMTP__SMTP_PASSWORD: 'Km**970814'
+    AIRFLOW__SMTP__SMTP_PORT: 587
+    AIRFLOW__SMTP__SMTP_FROM: 'dlrudals8899@gmail.com'
   volumes:
     - /home/ubuntu/airflow_yeardream/airflow/dags:/opt/airflow/dags
     - /home/ubuntu/logs:/opt/airflow/logs
