@@ -152,13 +152,13 @@ services:
       retries: 5
       start_period: 30s
     restart: always
+    networks:
+      network_custom:
+        - ipv4_address: 192.169.80.6
     depends_on:
       <<: *airflow-common-depends-on
       airflow-init:
         condition: service_completed_successfully
-    networks:
-      network_custom:
-        - ipv4_address: 192.169.80.6
 
 
   airflow-scheduler:
@@ -171,13 +171,13 @@ services:
       retries: 5
       start_period: 30s
     restart: always
+    networks:
+      network_custom:
+        - ipv4_address: 192.169.80.7
     depends_on:
       <<: *airflow-common-depends-on
       airflow-init:
         condition: service_completed_successfully
-    networks:
-      network_custom:
-        - ipv4_address: 192.169.80.7
 
   airflow-worker:
     <<: *airflow-common
@@ -197,13 +197,13 @@ services:
       # See https://airflow.apache.org/docs/docker-stack/entrypoint.html#signal-propagation
       DUMB_INIT_SETSID: "0"
     restart: always
+    networks:
+      network_custom:
+        - ipv4_address: 192.169.80.8
     depends_on:
       <<: *airflow-common-depends-on
       airflow-init:
         condition: service_completed_successfully
-    networks:
-      network_custom:
-        - ipv4_address: 192.169.80.8
 
   airflow-triggerer:
     <<: *airflow-common
@@ -215,13 +215,13 @@ services:
       retries: 5
       start_period: 30s
     restart: always
+    networks:
+      network_custom:
+        - ipv4_address: 192.169.80.9
     depends_on:
       <<: *airflow-common-depends-on
       airflow-init:
         condition: service_completed_successfully
-    networks:
-      network_custom:
-        - ipv4_address: 192.169.80.9
 
   airflow-init:
     <<: *airflow-common
