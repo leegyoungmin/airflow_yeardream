@@ -328,11 +328,12 @@ services:
 volumes:
   postgres-db-volume:
   postgres-custom-db-volume:
+
 networks:
   network_custom:
     driver: bridge
     ipam:
       driver: default
       config:
-        - subnet: 192.168.81.0/16
+        - subnet: 192.169.80.0/20
           gateway: 192.168.80.1
