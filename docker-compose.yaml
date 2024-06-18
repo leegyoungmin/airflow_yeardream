@@ -288,7 +288,6 @@ services:
       - ${AIRFLOW_PROJ_DIR:-.}:/sources
     networks:
       network_custom:
-        - ipv4_address: 192.169.80.10
 
   airflow-cli:
     <<: *airflow-common
