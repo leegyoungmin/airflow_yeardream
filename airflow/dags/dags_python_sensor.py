@@ -41,7 +41,7 @@ with DAG(
         op_kwargs={
             'http_conn_id': 'openapi.seoul.go.kr',
             'endpoint': '{{var.value.apikey_openapi_seoul_go_kr}}/json/tbCycleRentUseDayInfo',
-            'check_date': '{{date_interval_start.in_timezone("Asia/Seoul") | ds_nodash }}'
+            'check_date': '{{data_interval_start.in_timezone("Asia/Seoul") | ds_nodash }}'
         },
         poke_interval=600,
         mode="reschedule"
