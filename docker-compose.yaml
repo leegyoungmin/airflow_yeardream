@@ -105,7 +105,7 @@ services:
     restart: always
     networks:
       network_custom:
-        - ipv4_address: 192.169.80.4
+        ipv4_address: 192.169.80.4
 
   postgres_custom:
     image: postgres:13
@@ -120,7 +120,7 @@ services:
       - 5432:5432
     networks:
       network_custom:
-        - ipv4_address: 192.169.80.3
+        ipv4_address: 192.169.80.3
 
   redis:
     # Redis is limited to 7.2-bookworm due to licencing change
@@ -137,7 +137,7 @@ services:
     restart: always
     networks:
       network_custom:
-        - ipv4_address: 192.169.80.5
+        ipv4_address: 192.169.80.5
 
 
   airflow-webserver:
@@ -154,7 +154,7 @@ services:
     restart: always
     networks:
       network_custom:
-        - ipv4_address: 192.169.80.6
+        ipv4_address: 192.169.80.6
     depends_on:
       <<: *airflow-common-depends-on
       airflow-init:
@@ -173,7 +173,7 @@ services:
     restart: always
     networks:
       network_custom:
-        - ipv4_address: 192.169.80.7
+        ipv4_address: 192.169.80.7
     depends_on:
       <<: *airflow-common-depends-on
       airflow-init:
@@ -199,7 +199,7 @@ services:
     restart: always
     networks:
       network_custom:
-        - ipv4_address: 192.169.80.8
+        ipv4_address: 192.169.80.8
     depends_on:
       <<: *airflow-common-depends-on
       airflow-init:
@@ -217,7 +217,7 @@ services:
     restart: always
     networks:
       network_custom:
-        - ipv4_address: 192.169.80.9
+        ipv4_address: 192.169.80.9
     depends_on:
       <<: *airflow-common-depends-on
       airflow-init:
@@ -288,6 +288,7 @@ services:
       - ${AIRFLOW_PROJ_DIR:-.}:/sources
     networks:
       network_custom:
+        ipv4_address: 192.169.80.10
 
   airflow-cli:
     <<: *airflow-common
