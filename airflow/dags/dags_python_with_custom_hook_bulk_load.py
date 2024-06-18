@@ -18,5 +18,5 @@ with DAG(
         python_callable=insrt_postgres,
         op_kwargs={'postgres_conn_id': 'conn-db-postgres-custom',
                    'tbl_nm': 'seoul_bike_hist',
-                   'file_nm': '/opt/airflow/ingest/bikeList/{{data_interval_end.in_timezone("Asia/Seoul") | ds_nodash }}/bikeList.csv'}
+                   'file_nm': '/opt/airflow/files/bikeList/{{data_interval_end.in_timezone("Asia/Seoul") | ds_nodash }}/bikeList.csv'}
     )
