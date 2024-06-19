@@ -4,7 +4,7 @@ import json
 import requests
 from airflow.models import Variable
 
-REDIRECT_URL = 'https://example.com/oauth'
+REDIRECT_URL = 'https://gyoungmin.com/oauth'
 
 def _refresh_token_to_variable():
     client_id = Variable.get("kakao_client_secret")
